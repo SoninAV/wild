@@ -6,8 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        ul {
+        @counter-style empty-style {
+            system: extends decimal;
+            suffix: ' ';
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 0 15px 15px;
+        }
+
+        ol {
+            list-style: empty-style;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0645ad;
+        }
+        a:visited {
+            color: #0b0080;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1,
+        h2 {
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 3px;
+            font-family: 'Linux Libertine', 'Georgia', 'Times', 'Source Serif Pro', serif;
+            font-weight: normal;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .TOC {
             list-style-type: none;
+        }
+        .content {
+            border: 1px solid #a2a9b1;
+            background-color: #f8f9fa;
+            width: max-content;
+            padding: 10px 10px 0 0;
+        }
+        .illustration {
+            width: 20%;
+            float: left;
+            border: 1px solid #c8ccd1;
+            background-color: #f8f9fa;
+            padding: 10px 10px 0 10px;
+            margin: 0 10px 10px;
+            font-size: 14px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .card {
+            width: 300px;
+            margin: 5px;
+            text-align: center;
         }
     </style>
 </head>
@@ -18,27 +84,32 @@
     <p>Аму́рский тигр, или уссурийский тигр, — популяция подвида тигра Panthera tigris
         tigris, населяющей Дальний Восток России и Северо-Восточный Китай, также существует информация о небольшой
         популяции в Северной Корее. Занесён в Красную книгу Российской Федерации.</p>
-
-
-    <p>Содержание</p>
-    <ol>
-        <li><a href="#1">Распространение и среда обитания</a></li>
-        <li><a href="#2">Численность</a></li>
-        <li><a href="#3">Описание</a></li>
-        <li><a href="#4">Образ жизни</a>
-            <ul>
-                <li>4.1. <a href="#41">Размножение</a></li>
-                <li>4.2. <a href="#42">Питание</a></li>
-            </ul>
-        </li>
-        <li><a href="#5">Филогенетическое отношение к туранскому тигру</a></li>
-        <li><a href="#6">Охрана</a></li>
-        <li><a href="#7">Программа интродукции тигра в Казахстане</a></li>
-        <li><a href="#8">В геральдике</a></li>
-    </ol>
-
+    
+    <div class="content">
+        <b style="margin-left: 40px;">Содержание</b>
+        <ol>
+            <li><a href="#1">Распространение и среда обитания</a></li>
+            <li><a href="#2">Численность</a></li>
+            <li><a href="#3">Описание</a></li>
+            <li><a href="#4">Образ жизни</a>
+                <ul>
+                    <li class="TOC">4.1 <a href="#41">Размножение</a></li>
+                    <li class="TOC">4.2 <a href="#42">Питание</a></li>
+                </ul>
+            </li>
+            <li><a href="#5">Филогенетическое отношение к туранскому тигру</a></li>
+            <li><a href="#6">Охрана</a></li>
+            <li><a href="#7">Программа интродукции тигра в Казахстане</a></li>
+            <li><a href="#8">В геральдике</a></li>
+        </ol>
+    </div>
+    
     <h2 id="1">Распространение и среда обитания</h2>
 
+    <div class="illustration">
+        <img src="../img/tiger/Titles/River.jpg" alt="">
+        <p>Север ареала тигра: приток Амура и смешанные леса на склонах Сихотэ-Алиня</p>
+    </div>
     <p>Ареал этого тигра сосредоточен в охраняемой зоне на юго-востоке России, по берегам рек Амур и Уссури в Амурской
         области, Хабаровском и Приморском краях, Еврейской автономной области. Более всего амурские тигры распространены
         в предгорьях Сихотэ-Алинь в Лазовском районе Приморского края, где на сравнительно небольшой территории живёт
@@ -75,6 +146,11 @@
         особей.</p>
 
     <h2 id="3">Описание</h2>
+
+    <div class="illustration">
+        <img src="../img/tiger/Titles/Siberian_tiger.jpg" alt="">
+        <p>Амурский тигр. Кадр из фотоловушки</p>
+    </div>
 
     <p>Амурский тигр относится к наиболее крупным подвидам. Шерсть гуще, чем у тигров, живущих в тёплых районах, а его
         окрас светлее. Основной окрас шерсти в зимнее время — оранжевый, а живот белый.</p>
@@ -122,6 +198,10 @@
         охотится вместе с молодыми тиграми до тех пор, пока они не достигнут половой зрелости.</p>
 
     <h3 id="42">Питание</h3>
+    <div class="illustration">
+        <img src="../img/tiger/Titles/Deers.jpg" alt="">
+        <p>Группа оленей</p>
+    </div>
     <p>Несмотря на огромную силу и развитые органы чувств, тигру приходится очень много времени уделять охоте, поскольку
         успехом завершается только одна из 10 попыток. Тигр ползком подбирается к своей жертве, двигается при этом он
         особенным образом: выгнув спину и упираясь задними лапами в землю. Мелких животных он убивает, перегрызая горло,
@@ -200,6 +280,22 @@
     <p>В то же время, активная вырубка лесов в местах обитания этого вида, в том числе китайскими компаниями, и
         браконьерство создают новую угрозу для его выживания.</p>
     <p>В Китае за убийство амурского тигра, в том числе с целью самозащиты, предусмотрена смертная казнь.</p>
+
+    <h4 style="text-align: center; margin: 0;">Тигриные ООПТ</h4>
+    <div class="container">        
+        <div class="card">
+            <img src="../img/tiger/Parks/Park1.jpg" alt="">
+            <p>Тигрица Золушка в заповеднике «Бастак»</p>
+        </div>
+        <div class="card">
+            <img src="../img/tiger/Parks/Park2.jpg" alt="">
+            <p>Национальный парк «Зов тигра», река Милоградовка</p>
+        </div>
+        <div class="card">
+            <img src="../img/tiger/Parks/Park3.jpg" alt="">
+            <p>Тигрица Анна Савельевна в Сихотэ-Алинском заповеднике</p>
+        </div>
+    </div>
 
     <h2 id="7">Программа интродукции тигра в Казахстане</h2>
 
